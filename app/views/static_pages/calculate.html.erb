@@ -1,0 +1,9 @@
+<h1>EUR/USD</h1>
+<p>Input your sum, check dates, click button below.</p>
+
+<%= form_tag(compute_path) do %>
+	<%= label_tag :sum, "Amount of euros:" %>
+	<%= text_field_tag :sum %>
+
+	<%= submit_tag "Compute", class: "btn vtn-large btn-primary" %>
+<% end %>
