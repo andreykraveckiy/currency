@@ -2,7 +2,7 @@ class CreateEurUsdRates < ActiveRecord::Migration
   def change
     create_table :eur_usd_rates do |t|
       t.string :date
-      t.string :currency
+      t.decimal :currency, precision: 6, scale: 4
 
       t.timestamps
     end

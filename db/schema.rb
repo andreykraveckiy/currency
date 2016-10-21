@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20161020210315) do
 
   create_table "eur_usd_rates", force: true do |t|
     t.string   "date"
-    t.string   "currency"
+    t.decimal  "currency",   precision: 6, scale: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end

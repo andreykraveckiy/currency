@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe EurUsdRate do
-  let(:time_currency) { EurUsdRate.new(date: "2016-10-21", currency: "1.5000") }
+  let(:time_currency) { EurUsdRate.new(date: "2016-10-21", currency: 1.5000) }
 
   subject { time_currency }
 
@@ -39,26 +39,14 @@ describe EurUsdRate do
   end
 
   describe "currency field" do
-  	describe "when date is not present" do
-	  	it "should be invalid" do
-	  		not_present = ['', ' ', '-']
-
-	  		not_present.each do |symbol|
-	  			time_currency.currency = symbol
-	  			expect(time_currency).to be_invalid
-	  		end
-	  	end
+  	describe "when currency is not present" do
+  		before { time_currency.currency = '' }
+  		it { should be_invalid }
 		end
 
-		describe "when date is invalid" do
-			it "should be invalid" do
-				invalid = %w[1.25686 1,2568 1/4689 1 1.235]
-
-				invalid.each do |cur|
-					time_currency.currency = cur
-					expect(time_currency).to be_invalid
-				end
-			end
+		describe "when currency is invalid" do
+			before { time_currency.currency = '1,2568' }
+			it { should be_invalid }
 		end
   end
 end
