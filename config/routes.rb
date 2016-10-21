@@ -1,6 +1,7 @@
 CurrencyRate::Application.routes.draw do
   root 'static_pages#calculate'
   match '/compute', to: 'static_pages#compute', via: :post
+  match '/reload',  to: 'static_pages#reload',  via: :post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

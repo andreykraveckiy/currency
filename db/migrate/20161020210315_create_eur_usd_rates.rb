@@ -6,6 +6,6 @@ class CreateEurUsdRates < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :eur_usd_rates, :date
+    add_index :eur_usd_rates, :date, unique: true
   end
 end

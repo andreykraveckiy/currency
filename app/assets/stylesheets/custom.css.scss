@@ -41,3 +41,18 @@ input, .uneditable-input {
   margin: 5px;
   float: center;
 }
+
+.answers {
+  list-style: none;
+  align: center;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid #eaeaea;
+    width: 20%;
+    &:last-child {
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+}

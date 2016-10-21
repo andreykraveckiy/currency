@@ -1,9 +1,17 @@
 <% provide(:title, 'EUR to USD') %>
 <h1>EUR/USD</h1>
 <p>Input your sum, check dates, click button below.</p>
-<div>
+
+<div class="row">
 	<div class="span6 offset6">
-		<%= form_tag(compute_path) do %>
+		<%= form_tag(reload_path) do %>
+			<p>
+				<%= submit_tag "Load from ECB", class: "btn" %>
+			</p>
+		<% end %>
+	</div>
+	<div class="span6 offset6">
+		<%= form_tag(compute_path) do %>			
 			<p>
 				<%= label_tag :sum, "Amount of EUR:" %>
 				<%= text_field_tag :sum %>
@@ -11,7 +19,7 @@
 
 			<p>
 				<%= label_tag :start_date, "From" %>
-				<%= date_field_tag :start_date%>
+				<%= date_field_tag :start_date %>
 
 				<%= label_tag :end_date, "to" %>
 				<%=date_field_tag :end_date %>
@@ -21,5 +29,7 @@
 			</p>
 		<% end %>
 	</div>
-	<%= render 'compute' %>
+	<div>
+		
+	</div>
 </div>

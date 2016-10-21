@@ -1,0 +1,12 @@
+<% provide(:title, 'Unswers') %>
+
+<%= link_to "Back", root_path %>
+<ul class="answers">
+	<% @dates_cur.length.times do |i| %>
+		<li>
+			<%= @dates_cur[i].date %> | <%= number_with_precision(@answers[i], :precision => 2)%>			
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to "Back", root_path %>

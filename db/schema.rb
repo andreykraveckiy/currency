@@ -20,6 +20,6 @@ ActiveRecord::Schema.define(version: 20161020210315) do
     t.datetime "updated_at"
   end
 
-  add_index "eur_usd_rates", ["date"], name: "index_eur_usd_rates_on_date"
+  add_index "eur_usd_rates", ["date"], name: "index_eur_usd_rates_on_date", unique: true
 
 end
