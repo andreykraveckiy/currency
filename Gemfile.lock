@@ -26,6 +26,13 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    autoprefixer-rails (6.5.1)
+      execjs
+    bootstrap-datepicker-rails (1.6.4.1)
+      railties (>= 3.0)
+    bootstrap-sass (3.3.5)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -139,6 +146,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails
+  bootstrap-sass
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
   jbuilder (= 1.0.2)
@@ -156,4 +165,4 @@ RUBY VERSION
    ruby 2.0.0p648
 
 BUNDLED WITH
-   1.12.5
+   1.13.2

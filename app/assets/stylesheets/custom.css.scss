@@ -1,0 +1,43 @@
+@import "bootstrap";
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	padding-top: 10px;
+}
+
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+h1 {
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  box-sizing: border-box;
+}
+
+input, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 20%;
+  margin: 5px;
+  float: center;
+}
