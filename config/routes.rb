@@ -1,6 +1,4 @@
 CurrencyRate::Application.routes.draw do
-  root 'eur_usd_rates#download'
-  get "eur_usd_rates/calculate"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

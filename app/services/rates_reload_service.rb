@@ -4,7 +4,7 @@ require 'csv'
 CSV_URI = 'https://sdw.ecb.europa.eu/quickviewexport.do?SERIES_KEY=120.EXR.D.USD.EUR.SP00.A&type=csv'
 HEADER_SIZE = 5
 
-class RatesReload
+class RatesReloadService
 	attr_reader :data
 
 	def initialize(csv_file = nil)

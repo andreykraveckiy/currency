@@ -1,2 +1,0 @@
-module EurUsdRatesHelper
-end
