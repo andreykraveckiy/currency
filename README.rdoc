@@ -1,28 +1,18 @@
-== README
+Install
+1. In command prompt enter: git clone https://github.com/andreykraveckiy/currency and press ENTER.
+2. Enter "cd currency" + ENTER and follow to the project folder.
+3. Install required gems for project, use command: "bundle update" and "bundle install"
+4. For preparing you need to istall database. Enter in command prompt: "bundle exec rake db:migrate" + ENTER.
+5. You can prepare database for test also. Use this: "bundle exec rake test:prepare" + ENTER.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run
+1. In project's folder (see install 2nd paragraph) enter "rails s" and type ENTER.
+2. Open your favorite browser and enter in the adress bar "localhost:3000".
 
-Things you may want to cover:
+Use
+1. Enter your amount of euro.
+2. Choose the period.
+3. Click button "Compute".
+4. If something goes wrong, you will be able to see message in the top of the page.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+IMPORTANT! If you visited this page at first or can't get sum for today date, click on button "Load from ECB" and take a pause for 12-15 minutes.

@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
 		if !@dates_cur.empty? && !@amount.empty?
 			@answers = ExchangerService.exchange(params[:sum].to_f, get_currencies(@dates_cur))
 		else
-			flash[:error] = "Something went wrong. Please, choose another dates or check your amount!"
+			flash[:error] = "Something went wrong. Please, choose another dates, check your amount or load rates form ECB!"
 			redirect_to root_url
 		end
 	end
