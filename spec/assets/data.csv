@@ -1,0 +1,19 @@
+Data Source in SDW: https://sdw.ecb.europa.eu/quickview.do?SERIES_KEY=120.EXR.D.USD.EUR.SP00.A
+,EXR.D.USD.EUR.SP00.A
+,"ECB reference exchange rate, US dollar/Euro, 2:15 pm (C.E.T.)"
+Collection:,Average of observations through period (A)
+Period\Unit:,[US dollar ]
+2016-10-20,1.0980
+2016-10-19,1.0979
+2016-10-18,1.0993
+2016-10-17,1.0994
+2016-10-14,1.1002
+2016-10-13,1.1038
+2016-10-12,1.1020
+2016-10-11,1.1079
+2016-10-10,1.1160
+2016-10-07,1.1140
+2016-10-06,1.1185
+2016-10-05,1.1211
+2016-10-04,1.1161
+2016-10-03,1.1236
