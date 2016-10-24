@@ -10,7 +10,7 @@ class StaticPagesController < ApplicationController
 								{start_date: params[:start_date], end_date: params[:end_date]})
 		@amount = params[:sum]
 		if !@dates_cur.empty? && !@amount.empty?
-			@answers = ExchangerService.exchange(params[:sum].to_f, get_currencies(@dates_cur))
+			@answers = EurUsdRate.exchange(params[:sum].to_f, get_currencies(@dates_cur))
 		else
 			flash[:error] = "Something went wrong. Please, choose another dates, check your amount or load rates form ECB!"
 			redirect_to root_url
@@ -18,9 +18,8 @@ class StaticPagesController < ApplicationController
 	end
 
 	def reload
-		rr = RatesReloadService.new
-		rr.perform
-		if rr.data.empty?
+		EurUsdRate.perform
+		if EurUsdRate.data.empty?
 			flash[:error] = "Please try in another time!"
 			redirect_to root_url
 		else
