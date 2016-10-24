@@ -75,6 +75,21 @@ describe EurUsdRate do
 				end
 			end
 
+			describe "when file is not correct" do
+				before do
+					EurUsdRate.csv_file = './helpers/none'
+					EurUsdRate.perform 
+				end
+
+				it "should have empty db" do
+					expect(EurUsdRate.count).to eq 0
+				end
+
+				it "should have empty data" do
+					expect(EurUsdRate.data).to be_empty
+				end
+			end
+
 			describe "after loading" do
 				before do
 					EurUsdRate.csv_file = LOCAL_CSV

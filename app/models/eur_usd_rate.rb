@@ -11,6 +11,7 @@ class EurUsdRate < ActiveRecord::Base
 	cattr_reader :data # for checking data
 
 	def EurUsdRate.perform
+		@@data = []
 		@csv_file ||= csv_load_from_uri
 		fill_in_db
 	end
@@ -26,13 +27,19 @@ class EurUsdRate < ActiveRecord::Base
 	private
 
 		def EurUsdRate.csv_load_from_uri
-			open(CSV_URI)		
+			begin
+				open(CSV_URI)		
+			rescue
+			end
 		end
 
 		def EurUsdRate.fill_in_db
-			@@data = CSV.read(@csv_file)[HEADER_SIZE..-1] 
-			@@data.reverse.each do |row|
-				EurUsdRate.create(date: row[0], currency: row[-1])
+			begin
+				@@data = CSV.read(@csv_file)[HEADER_SIZE..-1] 
+				@@data.reverse.each do |row|
+					EurUsdRate.create(date: row[0], currency: row[-1])
+				end
+			rescue
 			end
 		end
 end
