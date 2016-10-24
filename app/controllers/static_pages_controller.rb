@@ -1,6 +1,3 @@
-require './app/services/rates_reload_service'
-require './app/services/exchanger_service'
-
 class StaticPagesController < ApplicationController
 	def calculate
 	end
